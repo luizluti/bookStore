@@ -5,7 +5,7 @@ import Header from '../../components/Header'
 const Store = () => {
   return (
     <Container>
-      <Header />
+      <Header title='Loja' />
       <PopularWrapper>
         <PopularText>Popular</PopularText>
       </PopularWrapper>

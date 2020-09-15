@@ -1,12 +1,12 @@
 import React from 'react'
-import { Text } from 'react-native'
+import Header from '../../components/Header'
 
 import { Container } from './styles'
 
 const Favorites = () => {
   return (
     <Container>
-      <Text>Favoritos</Text>
+      <Header title='Favoritos' />
     </Container>
   )
 }

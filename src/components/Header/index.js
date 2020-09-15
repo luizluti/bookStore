@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { HeaderWrapper, Title, Arrow } from './styles'
@@ -11,7 +12,7 @@ const Header = (props) => {
       <Arrow onPress={() => navigation.goBack()}>
         <ArrowSvg height={18} fill={'#FFF'}/>
       </Arrow>
-      <Title>Loja</Title>
+      <Title>{props.title}</Title>
     </HeaderWrapper>
   )
 }
