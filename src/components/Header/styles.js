@@ -9,7 +9,7 @@ export const HeaderWrapper = styled.View`
   position: relative
 `
 
-export const Seta = styled.TouchableOpacity`
+export const Arrow = styled.TouchableOpacity`
   position: absolute;
   left: 0px;
 `

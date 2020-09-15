@@ -1,13 +1,16 @@
 import React from 'react'
-import { HeaderWrapper, Title, Seta } from './styles'
-import Arrow from '../../assets/icons/arrow.svg'
+import { useNavigation } from '@react-navigation/native'
+import { HeaderWrapper, Title, Arrow } from './styles'
+import ArrowSvg from '../../assets/icons/arrow.svg'
 
 const Header = (props) => {
+  const navigation = useNavigation()
+
   return (
     <HeaderWrapper>
-      <Seta onPress={() => {}}>
-        <Arrow height={18} fill={'#FFF'}/>
-      </Seta>
+      <Arrow onPress={() => navigation.goBack()}>
+        <ArrowSvg height={18} fill={'#FFF'}/>
+      </Arrow>
       <Title>Loja</Title>
     </HeaderWrapper>
   )
