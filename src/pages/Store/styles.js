@@ -9,6 +9,7 @@ export const PopularWrapper = styled.ScrollView`
 export const PopularText = styled.Text`
   text-align: center;
   font-size: 18px;
+  font-family: 'Rubik-Regular';
   color: #F7AB21;
   margin: 20px;
 `

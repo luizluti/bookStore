@@ -17,5 +17,6 @@ export const Arrow = styled.TouchableOpacity`
 export const Title = styled.Text`
   justify-content: center;
   font-size: 18px;
-  color: #FFF
+  font-family: 'Rubik-Regular';
+  color: #FFF;
 `
