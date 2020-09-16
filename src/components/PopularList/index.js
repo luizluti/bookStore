@@ -7,9 +7,14 @@ import {
   BookInfo,
   BookTitle,
   BookCategory,
+  StarsContainer,
+  DownloadBtn,
+  DownloadBtnText,
   BookImg
 } from './styles'
 import data from './data'
+import DownloadSvg from '../../assets/icons/download.svg'
+import StarRating from 'react-native-star-rating'
 
 const PopularList = () => {
   const Book = ({ item }) => (
@@ -27,6 +32,28 @@ const PopularList = () => {
         <BookCategory>
           {item.ageAppropriate.toUpperCase()}
         </BookCategory>
+
+        <StarsContainer>
+          <StarRating
+            disabled={false}
+            maxStars={5}
+            rating={item.rate}
+            selectedStar={(rating) => {}}
+            fullStarColor={'#F7AB21'}
+            emptyStarColor={'#F7AB21'}
+            starSize={22}
+          />
+        </StarsContainer>
+
+        <DownloadBtn
+          onPress={() => {}}
+        >
+          <DownloadSvg height={16} fill={'#F7AB21'} style={{ marginLeft: -6 }} />
+          <DownloadBtnText>
+            DOWNLOAD PRÉVIA
+          </DownloadBtnText>
+        </DownloadBtn>
+
       </BookInfo>
     </BookContainer>
   )

@@ -15,7 +15,7 @@ export const PupularText = styled.Text`
 export const BookContainer = styled.View`
   width: 100%;
   flex-direction: row;
-  background-color: #CCC;
+  background-color: #F4F4F4;
   margin-bottom: 10px;
   border-radius: 4px;
   /* padding: 10px; */
@@ -40,4 +40,22 @@ export const BookTitle = styled.Text`
 export const BookCategory = styled.Text`
   font-family: 'Rubik-Regular';
 `
-// export const BookAgeAppropriate = styled.te
+export const StarsContainer = styled.View`
+  width: 120px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+`
+export const DownloadBtn = styled.TouchableOpacity`
+  padding: 10px;
+  border: 2px solid #F7AB21;
+  border-radius: 25px;
+  flex-direction: row;
+  /* justify-content: center; */
+  /* align-items: center; */
+`
+export const DownloadBtnText = styled.Text`
+  font-family: 'Rubik-Regular';
+  color: #F7AB21;
+  align-self: center;
+  /* margin-right: 10px; */
+`

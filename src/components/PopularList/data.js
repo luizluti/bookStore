@@ -43,7 +43,7 @@ export default [
   {
     id: 4,
     title: 'As Crônicas de Nárnia',
-    category: 'Ficção Científica/Fantasia',
+    category: 'FANTASIA/AVENTURA',
     ageAppropriate: '10 ANOS',
     originalTitle: 'The Chronicles of Narnia',
     author: 'Clive Staples Lewis',
