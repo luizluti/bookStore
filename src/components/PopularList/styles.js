@@ -1,6 +1,6 @@
 import styled from 'styled-components/native'
 
-export const List = styled.ScrollView`
+export const List = styled.FlatList`
   padding: 24px;
 `
 
@@ -57,5 +57,11 @@ export const DownloadBtnText = styled.Text`
   font-family: 'Rubik-Regular';
   color: #F7AB21;
   align-self: center;
-  /* margin-right: 10px; */
+`
+export const Loading = styled.ActivityIndicator.attrs({
+  size: 40,
+  color: '#F7AB21'
+})`
+  margin: 20px;
+  margin-bottom: 40px;
 `

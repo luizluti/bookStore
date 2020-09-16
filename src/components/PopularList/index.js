@@ -10,13 +10,18 @@ import {
   StarsContainer,
   DownloadBtn,
   DownloadBtnText,
-  BookImg
+  BookImg,
+  Loading
 } from './styles'
 import data from './data'
 import DownloadSvg from '../../assets/icons/download.svg'
 import StarRating from 'react-native-star-rating'
 
 const PopularList = () => {
+  const ListHeader = () => (
+    <PupularText>Popular</PupularText>
+  )
+
   const Book = ({ item }) => (
     <BookContainer>
       <BookImg
@@ -60,12 +65,22 @@ const PopularList = () => {
 
   return (
 
-    <List>
-      <PupularText>Popular</PupularText>
-      {data.map((item) => (
-        <Book key={item.id.toString()} item={item} />
-      ))}
-    </List>
+    <List
+      data={data}
+      keyExtractor={(item) => item.id.toString()}
+      ListHeaderComponent={ListHeader}
+      ListFooterComponent={<Loading />}
+      renderItem={({ item }) => (
+        <Book item={item}/>
+      )}
+    />
+
+  // <List>
+  //   <PupularText>Popular</PupularText>
+  //   {data.map((item) => (
+  //     <Book key={item.id.toString()} item={item} />
+  //   ))}
+  // </List>
 
   // <ListWrapper>
   //   <List
