@@ -6,7 +6,7 @@ export const List = styled.FlatList`
 
 export const PupularText = styled.Text`
   text-align: center;
-  font-size: 18px;
+  font-size: 20px;
   font-family: 'Rubik-Bold';
   color: #F7AB21;
   margin-bottom: 24px;

@@ -2,9 +2,16 @@
 import React from 'react'
 import {
   HeaderWrapper,
-  Title,
+  HeaderTitle,
   Arrow,
-  Modal
+  Modal,
+  BookWrapper,
+  BookTitle,
+  BookInfoWrapper,
+  BookImg,
+  TextInfoWrapper,
+  Title,
+  Info
 } from './styles'
 
 import ArrowSvg from '../../assets/icons/arrow.svg'
@@ -19,9 +26,32 @@ const BookModal = (props) => {
         <Arrow onPress={() => props.setModalVisible(false)}>
           <ArrowSvg height={18} fill={'#FFF'}/>
         </Arrow>
-        <Title>Loja</Title>
+        <HeaderTitle>Loja</HeaderTitle>
       </HeaderWrapper>
-      <Text>{props.modalItem.title}</Text>
+
+      <BookWrapper>
+        <BookTitle>{props.modalItem.title}</BookTitle>
+
+        <BookInfoWrapper>
+          <BookImg
+            source={props.modalItem.img}
+          />
+          <TextInfoWrapper>
+            <Title>Título original</Title>
+            <Info>{props.modalItem.originalTitle.toUpperCase()}</Info>
+
+            <Title>Gênero</Title>
+            <Info>{props.modalItem.category.toUpperCase()}</Info>
+
+            <Title>Autor</Title>
+            <Info>{props.modalItem.author.toUpperCase()}</Info>
+
+            <Title>Origem</Title>
+            <Info>{props.modalItem.origin.toUpperCase()}</Info>
+
+          </TextInfoWrapper>
+        </BookInfoWrapper>
+      </BookWrapper>
     </Modal>
   )
 }
