@@ -1,14 +1,13 @@
 import React from 'react'
-import { Container, PopularWrapper, PopularText } from './styles'
+import { Container } from './styles'
 import Header from '../../components/Header'
+import PopularList from '../../components/PopularList'
 
 const Store = () => {
   return (
     <Container>
       <Header title='Loja' />
-      <PopularWrapper>
-        <PopularText>Popular</PopularText>
-      </PopularWrapper>
+      <PopularList />
     </Container>
   )
 }
