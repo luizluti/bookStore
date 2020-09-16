@@ -25,6 +25,8 @@ export const BookInfo = styled.View`
   padding: 10px;
 `
 
+export const ImgButton = styled.TouchableOpacity``
+
 export const BookImg = styled.Image`
   height: 210px;
   width: 140px;

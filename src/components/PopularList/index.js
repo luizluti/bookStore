@@ -10,6 +10,7 @@ import {
   StarsContainer,
   DownloadBtn,
   DownloadBtnText,
+  ImgButton,
   BookImg,
   Loading
 } from './styles'
@@ -17,51 +18,64 @@ import data from './data'
 import DownloadSvg from '../../assets/icons/download.svg'
 import StarRating from 'react-native-star-rating'
 
-const PopularList = () => {
+const PopularList = (props) => {
+  const handleModal = (item) => {
+    props.setModalItem(item)
+    props.setModalVisible(true)
+  }
+
   const ListHeader = () => (
     <PupularText>Popular</PupularText>
   )
 
-  const Book = ({ item }) => (
-    <BookContainer>
-      <BookImg
-        source={item.img}
-      />
-      <BookInfo>
-        <BookTitle>
-          {item.title}
-        </BookTitle>
-        <BookCategory>
-          {item.category.toUpperCase()}
-        </BookCategory>
-        <BookCategory>
-          {item.ageAppropriate.toUpperCase()}
-        </BookCategory>
-
-        <StarsContainer>
-          <StarRating
-            disabled={false}
-            maxStars={5}
-            rating={item.rate}
-            selectedStar={(rating) => {}}
-            fullStarColor={'#F7AB21'}
-            emptyStarColor={'#F7AB21'}
-            starSize={22}
-          />
-        </StarsContainer>
-
-        <DownloadBtn
-          onPress={() => {}}
+  const Book = ({ item }) => {
+    return (
+      <BookContainer>
+        <ImgButton
+          onPress={() => handleModal(item)}
         >
-          <DownloadSvg height={16} fill={'#F7AB21'} style={{ marginLeft: -6 }} />
-          <DownloadBtnText>
-            DOWNLOAD PRÉVIA
-          </DownloadBtnText>
-        </DownloadBtn>
+          <BookImg
+            source={item.img}
+          />
+        </ImgButton>
 
-      </BookInfo>
-    </BookContainer>
-  )
+        <BookInfo>
+          <BookTitle>
+            {item.title}
+          </BookTitle>
+          <BookCategory>
+            {item.category.toUpperCase()}
+          </BookCategory>
+          <BookCategory>
+            {item.ageAppropriate.toUpperCase()}
+          </BookCategory>
+
+          <StarsContainer>
+            <StarRating
+              disabled={false}
+              maxStars={5}
+              rating={item.rate}
+              selectedStar={(rating) => {}}
+              fullStarColor={'#F7AB21'}
+              emptyStarColor={'#F7AB21'}
+              starSize={22}
+            />
+          </StarsContainer>
+
+          <DownloadBtn
+            onPress={() => {}}
+          >
+            <DownloadSvg height={16} fill={'#F7AB21'} style={{ marginLeft: -6 }} />
+            <DownloadBtnText>
+              DOWNLOAD PRÉVIA
+            </DownloadBtnText>
+          </DownloadBtn>
+
+        </BookInfo>
+
+      </BookContainer>
+    )
+  }
 
   return (
 
@@ -75,28 +89,6 @@ const PopularList = () => {
         <Book item={item}/>
       )}
     />
-
-  // <List>
-  //   <PupularText>Popular</PupularText>
-  //   {data.map((item) => (
-  //     <Book key={item.id.toString()} item={item} />
-  //   ))}
-  // </List>
-
-  // <ListWrapper>
-  //   <List
-  //     data={data}
-  //     keyExtractor={(item) => item.id.toString()}
-  //     renderItem={({ item }) => (
-  //       <>
-  //         <BookTitle>{item.title}</BookTitle>
-  //         <BookImg
-  //           source={item.source}
-  //         />
-  //       </>
-  //     )}
-  //   />
-  // </ListWrapper>
 
   )
 }

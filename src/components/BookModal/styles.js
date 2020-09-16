@@ -1,5 +1,8 @@
 import styled from 'styled-components/native'
 
+export const Modal = styled.Modal`
+
+`
 export const HeaderWrapper = styled.View`
   flex-direction: row;
   justify-content: center;
