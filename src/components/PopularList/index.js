@@ -70,6 +70,7 @@ const PopularList = () => {
       keyExtractor={(item) => item.id.toString()}
       ListHeaderComponent={ListHeader}
       ListFooterComponent={<Loading />}
+      showsVerticalScrollIndicator={false}
       renderItem={({ item }) => (
         <Book item={item}/>
       )}
