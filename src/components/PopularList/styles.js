@@ -23,7 +23,7 @@ export const BookContainer = styled.View`
 export const BookInfo = styled.View`
   flex: 1;
   flex-direction: column;
-  padding: 10px;
+  padding: 5px;
 `
 
 export const ImgButton = styled.TouchableOpacity``

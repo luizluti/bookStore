@@ -1,7 +1,7 @@
-import potter from '../../assets/images/harry-potter.png'
-import cidadeOssos from '../../assets/images/cidade-dos-ossos.png'
-import apocalipse from '../../assets/images/a-batalha-do-apocalipse.png'
-import narnia from '../../assets/images/cronicas-de-narnia.png'
+import potter from './assets/images/harry-potter.png'
+import cidadeOssos from './assets/images/cidade-dos-ossos.png'
+import apocalipse from './assets/images/a-batalha-do-apocalipse.png'
+import narnia from './assets/images/cronicas-de-narnia.png'
 
 export default [
   {

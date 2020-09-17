@@ -12,7 +12,7 @@ import {
   BookImg,
   Loading
 } from './styles'
-import data from './data'
+import data from '../../data'
 import DownloadButton from '../DownloadButton'
 import StarRating from 'react-native-star-rating'
 

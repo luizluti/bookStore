@@ -37,6 +37,7 @@ const BookModal = (props) => {
   return (
     <Modal
       visible={props.modalVisible}
+      onBackButtonPress={() => props.setModalVisible(false)}
     >
       <HeaderWrapper>
         <Arrow onPress={() => props.setModalVisible(false)}>
