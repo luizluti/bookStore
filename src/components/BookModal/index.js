@@ -97,7 +97,7 @@ const BookModal = (props) => {
           <PriceWrapper>
             <Moeda>R$</Moeda>
             <PriceColumn>
-              <Price>25,90</Price>
+              <Price>{props.modalItem.price}</Price>
               <Debit>COMPRA NO DÉBITO</Debit>
             </PriceColumn>
 

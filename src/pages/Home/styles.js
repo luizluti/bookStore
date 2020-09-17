@@ -15,7 +15,7 @@ export const Populares = styled.Text`
   color: #F7AB21;
   font-size: 24px;
   text-align: center;
-  margin: 24px;
+  margin: 36px;
 `
 
 export const CarouselImg = styled.Image`
