@@ -58,7 +58,7 @@ export const Title = styled.Text`
 `
 
 export const Info = styled.Text`
-  width: 180px;
+  width: 160px;
   font-family: 'Rubik-Regular';
 `
 
