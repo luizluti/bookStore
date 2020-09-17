@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
-import React from 'react'
+import React, { useState } from 'react'
+import { Alert } from 'react-native'
 import {
   HeaderWrapper,
   HeaderTitle,
@@ -32,8 +33,55 @@ import StarRating from 'react-native-star-rating'
 import DownloadButton from '../DownloadButton'
 import Cart from '../../assets/icons/cart.svg'
 import Like from '../../assets/icons/like.svg'
+import AsyncStorage from '@react-native-community/async-storage'
+import { useFocusEffect } from '@react-navigation/native'
 
 const BookModal = (props) => {
+  const [bookFavList, setBookFavList] = useState([])
+
+  useFocusEffect(() => {
+    async function getBook () {
+      const data = await AsyncStorage.getItem('@books')
+
+      if (data) {
+        const list = await JSON.parse(data)
+        setBookFavList(list)
+      }
+    }
+
+    getBook()
+  }, [])
+
+  const handleAddBook = async (item) => {
+    const data = {
+      id: item.id,
+      title: item.title,
+      img: item.img,
+      description: item.description
+    }
+
+    if (!(bookFavList.find(book => book.id === item.id))) {
+      bookFavList.push(data)
+
+      await AsyncStorage.setItem('@books', JSON.stringify(bookFavList))
+    } else {
+      Alert.alert('Livro Adicionado!', 'Parece que você já adicionou este Livro aos Favoritos', [
+        { text: 'FECHAR', onPress: () => console.log('OK Pressed') },
+        {
+          text: 'EXCLUIR DOS FAVORITOS',
+          onPress: () => handleDeleteBook(item.id)
+        }
+      ]
+      )
+    }
+  }
+
+  const handleDeleteBook = async (itemId) => {
+    const newList = bookFavList.filter(item => item.id !== itemId)
+    await AsyncStorage.setItem('@books', JSON.stringify(newList))
+    setBookFavList(newList)
+  }
+
   return (
     <Modal
       visible={props.modalVisible}
@@ -110,7 +158,9 @@ const BookModal = (props) => {
             </BuyText>
           </BuyButton>
 
-          <LikeWrapper onPress={() => {}}>
+          <LikeWrapper
+            onPress={() => handleAddBook(props.modalItem)}
+          >
             <Like height={24} fill={'#F7AB21'} />
           </LikeWrapper>
 
