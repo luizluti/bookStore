@@ -65,10 +65,10 @@ const BookModal = (props) => {
 
       await AsyncStorage.setItem('@books', JSON.stringify(bookFavList))
     } else {
-      Alert.alert('Livro Adicionado!', 'Parece que você já adicionou este Livro aos Favoritos', [
-        { text: 'FECHAR', onPress: () => console.log('OK Pressed') },
+      Alert.alert('Livro Adicionado!', 'Parece que você já adicionou este Livro aos Favoritos.', [
+        { text: 'FECHAR', onPress: () => {} },
         {
-          text: 'EXCLUIR DOS FAVORITOS',
+          text: 'EXCLUIR LIVRO DOS FAVORITOS',
           onPress: () => handleDeleteBook(item.id)
         }
       ]
