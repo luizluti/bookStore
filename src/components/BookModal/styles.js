@@ -85,3 +85,62 @@ export const MoreInfo = styled.Text`
 export const DownloadBtnWrapper = styled.View`
   margin-top: 40px;
 `
+
+export const PriceWrapper = styled.View`
+  padding: 24px;
+  justify-content: center;
+  align-items: center;
+  background-color: #F4F4F4;
+  border-radius: 4px;
+  flex-direction: row;
+`
+
+export const PriceColumn = styled.View`
+  align-items: center;
+  justify-content: center;
+`
+
+export const Moeda = styled.Text`
+  font-family: 'Rubik-Bold';
+  font-size: 12px;
+  margin-right: 10px;
+  margin-left: -26px;
+`
+
+export const Price = styled.Text`
+  font-family: 'Rubik-Bold';
+  font-size: 28px;
+`
+
+export const Debit = styled.Text`
+  font-family: 'Rubik-Regular';
+  font-size: 10px;
+`
+
+export const BuyButton = styled.TouchableOpacity`
+  width: 200px;
+  background-color: #F7AB21;
+  border-radius: 18px;
+  align-self: center;
+  margin-top: -18px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+`
+
+export const BuyText = styled.Text`
+  font-family: 'Rubik-Regular';
+  font-size: 14px;
+  line-height: 36px;
+  text-align: center;
+`
+
+export const LikeWrapper = styled.TouchableOpacity`
+  width: 56px;
+  height: 56px;
+  background-color: #000;
+  justify-content: center;
+  align-items: center;
+  border-radius: 28px;
+  align-self: flex-end;
+`

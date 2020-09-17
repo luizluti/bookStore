@@ -16,12 +16,22 @@ import {
   MoreInfoTitle,
   MoreInfo,
   MoreInfoWrapper,
-  DownloadBtnWrapper
+  DownloadBtnWrapper,
+  PriceWrapper,
+  PriceColumn,
+  Moeda,
+  Price,
+  Debit,
+  BuyButton,
+  BuyText,
+  LikeWrapper
 } from './styles'
 
 import ArrowSvg from '../../assets/icons/arrow.svg'
 import StarRating from 'react-native-star-rating'
 import DownloadButton from '../DownloadButton'
+import Cart from '../../assets/icons/cart.svg'
+import Like from '../../assets/icons/like.svg'
 
 const BookModal = (props) => {
   return (
@@ -80,6 +90,28 @@ const BookModal = (props) => {
           <DownloadBtnWrapper>
             <DownloadButton />
           </DownloadBtnWrapper>
+
+          <MoreInfoTitle>E-book Kindle</MoreInfoTitle>
+
+          <PriceWrapper>
+            <Moeda>R$</Moeda>
+            <PriceColumn>
+              <Price>25,90</Price>
+              <Debit>COMPRA NO DÉBITO</Debit>
+            </PriceColumn>
+
+          </PriceWrapper>
+
+          <BuyButton onPress={() => {}}>
+            <Cart height={18} fill={'#000'} style={{ marginLeft: -6 }}/>
+            <BuyText>
+              COMPRAR AGORA
+            </BuyText>
+          </BuyButton>
+
+          <LikeWrapper onPress={() => {}}>
+            <Like height={24} fill={'#F7AB21'} />
+          </LikeWrapper>
 
         </MoreInfoWrapper>
 
