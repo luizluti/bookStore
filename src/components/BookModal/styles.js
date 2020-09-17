@@ -1,7 +1,6 @@
 import styled from 'styled-components/native'
 
 export const Modal = styled.Modal`
-
 `
 export const HeaderWrapper = styled.View`
   flex-direction: row;
@@ -61,4 +60,28 @@ export const Title = styled.Text`
 export const Info = styled.Text`
   width: 200px;
   font-family: 'Rubik-Regular';
+`
+
+export const StarsContainer = styled.View`
+  width: 120px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+`
+
+export const MoreInfoWrapper = styled.View`
+  margin-bottom: 48px;
+`
+
+export const MoreInfoTitle = styled.Text`
+  font-family: 'Rubik-Bold';
+  margin-top: 40px;
+  margin-bottom: 10px;
+`
+
+export const MoreInfo = styled.Text`
+  font-family: 'Rubik-Regular';
+`
+
+export const DownloadBtnWrapper = styled.View`
+  margin-top: 40px;
 `

@@ -8,14 +8,12 @@ import {
   BookTitle,
   BookCategory,
   StarsContainer,
-  DownloadBtn,
-  DownloadBtnText,
   ImgButton,
   BookImg,
   Loading
 } from './styles'
 import data from './data'
-import DownloadSvg from '../../assets/icons/download.svg'
+import DownloadButton from '../DownloadButton'
 import StarRating from 'react-native-star-rating'
 
 const PopularList = (props) => {
@@ -62,14 +60,7 @@ const PopularList = (props) => {
             />
           </StarsContainer>
 
-          <DownloadBtn
-            onPress={() => {}}
-          >
-            <DownloadSvg height={16} fill={'#F7AB21'} style={{ marginLeft: -6 }} />
-            <DownloadBtnText>
-              DOWNLOAD PRÉVIA
-            </DownloadBtnText>
-          </DownloadBtn>
+          <DownloadButton />
 
         </BookInfo>
 
