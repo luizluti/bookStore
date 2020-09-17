@@ -21,6 +21,7 @@ export const BookContainer = styled.View`
   /* padding: 10px; */
 `
 export const BookInfo = styled.View`
+  flex: 1;
   flex-direction: column;
   padding: 10px;
 `

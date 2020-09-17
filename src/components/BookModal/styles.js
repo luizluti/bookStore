@@ -58,7 +58,7 @@ export const Title = styled.Text`
 `
 
 export const Info = styled.Text`
-  width: 200px;
+  width: 180px;
   font-family: 'Rubik-Regular';
 `
 
@@ -83,6 +83,7 @@ export const MoreInfo = styled.Text`
 `
 
 export const DownloadBtnWrapper = styled.View`
+  align-items: center;
   margin-top: 40px;
 `
 

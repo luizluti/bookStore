@@ -12,7 +12,7 @@ const DownloadButton = () => {
     <DownloadBtn
       onPress={() => {}}
     >
-      <DownloadSvg height={16} fill={'#F7AB21'} style={{ marginLeft: -6 }} />
+      <DownloadSvg height={12} fill={'#F7AB21'} style={{ marginLeft: -12 }} />
       <DownloadBtnText>
         DOWNLOAD PRÉVIA
       </DownloadBtnText>

@@ -45,7 +45,7 @@ export default [
     title: 'As Crônicas de Nárnia',
     category: 'FANTASIA/AVENTURA',
     ageAppropriate: '10 ANOS',
-    originalTitle: 'THE CHRONICLES OS NARNIA',
+    originalTitle: 'THE CHRONICLES OF NARNIA',
     author: 'CLIVE STAPLES LEWIS',
     origin: 'INGLATERRA',
     description: 'Viagens ao fim do mundo, criaturas fantásticas e batalhas épicas entre o bem e o mal - o que mais um leitor poderia querer de um livro? O livro que tem tudo isso é O leão, a feiticeira e o guarda-roupa, escrito em 1949 por Clive Staples Lewis. MasLewis não parou por aí. Seis outros livros vieram depois e, juntos, ficaram conhecidos como As crônicas de Nárnia. Nos últimos cinqüenta anos, As crônicas de Nárnia transcenderam o gênero da fantasia para se tornar parte do cânone da literaturaclássica...',
